@@ -34,6 +34,14 @@ const CardActionsStyled = styled(CardActions)`
   justify-content: center;
 `;
 
+const styles = { 
+  div:{
+    color:'red'
+   },
+   p:{
+    fontSize: '0.765em'
+   }
+}
 
 const useValidation = (value, validations) => {
   const [isEmpty, setEmpty] = useState(true);
@@ -84,16 +92,14 @@ const useInput = (initialValue, validations)=> {
   const onChange = (e) => {
     setValue(e.target.value)
   }
-
   const onBlur = () =>{
     setDirty(true)
   }
-
   return {
     value, 
     onChange,
     onBlur,
-    isDirty,
+    isDirty,   
     ...valid
   }
 }
@@ -121,7 +127,14 @@ const NewClient = () => {
   const onCityChange = (event) => {
     setCity(event.target.value);
   };
-  
+
+  function createClient(){
+
+  }
+
+  function handleReset() {
+      
+  }  
 
   return (
     <CardStyled raised={true}>
@@ -129,6 +142,8 @@ const NewClient = () => {
         <H1>Create new client</H1>
         <Form >         
           <TextField required label="Company name" value= {companyName.value} onChange={e=>companyName.onChange(e)} onBlur={e => companyName.onBlur(e)}/>
+
+          <p>{}</p>
           <TextField required label="Address 1" value={address1.value} onChange={e=>address1.onChange(e)} onBlur={e => address1.onBlur(e)}/>
           <TextField label="Address 2" value={address2.value}  onChange={e=>address2.onChange(e)} onBlur = {e =>address2.onBlur(e)}/>
           <TextField
@@ -146,18 +161,18 @@ const NewClient = () => {
           </TextField>
           <TextField required label="Postal code"  value={postalCode.value} onChange={e=>postalCode.onChange(e)} onBlur={e => postalCode.onBlur(e)}/>
           <TextField required label="Contact name"  value={contactName.value} onChange={e=>contactName.onChange(e)} onBlur={e => contactName.onBlur(e)}/>
-          {(phoneNumber.isDirty && phoneNumber.isEmpty) && <div style={{color:'red'}}>This field is required.</div>}
-          {(phoneNumber.isDirty && phoneNumber.minLengthError) && <div style={{color:'red'}}>Please enter a valid phone number. <p style={{fontSize: '0.765em'}}>Example:###-###-####</p></div>}
+          {(phoneNumber.isDirty && phoneNumber.isEmpty) && <div style={styles.div}>This field is required.</div>}
+          {(phoneNumber.isDirty && phoneNumber.minLengthError) && <div style={styles.div}>Please enter a valid phone number. <p style={styles.p}>Example:###-###-####</p></div>}
           <TextField required label="Contact phone" value={phoneNumber.value}  onChange={e=>phoneNumber.onChange(e)} onBlur={e => phoneNumber.onBlur(e)}/>
-          {(email.isDirty && email.isEmpty) && <div style={{color:'red'}}>This field is required.</div>}
-          {(email.isDirty && email.minLengthError) && <div style={{color:'red'}}>Please enter a valid email.</div>}
-          {(email.isDirty && email.emailError) && <div style={{color:'red'}}>Email is not valid.</div>}
+          {(email.isDirty && email.isEmpty) && <div style={styles.div}>This field is required.</div>}
+          {(email.isDirty && email.minLengthError) && <div style={styles.div}>Please enter a valid email.</div>}
+          {(email.isDirty && email.emailError) && <div style={styles.div}>Email is not valid.</div>}
           <TextField required label="Contact email" value={email.value}  onChange={e=>email.onChange(e)} onBlur={e => email.onBlur(e)} />
         </Form>
       </CardContent>
       <CardActionsStyled>
-        <Button size="small" >Cancel</Button>
-        <Button color="primary" disabled ={!email.inputValid || !phoneNumber.inputValid}>Create</Button>
+        <Button size="small" onClick={handleReset} >Cancel</Button>
+        <Button color="primary" disabled ={!email.inputValid || !phoneNumber.inputValid} onClick={createClient}>Create</Button>
       </CardActionsStyled>
     </CardStyled>
       
