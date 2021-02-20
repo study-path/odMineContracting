@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Work\\odMineContracting\\be\\odMineContracting.Api\\odMineContracting.Api.csproj": {}
+    "C:\\Work\\odMineContracting\\odMineContracting.Api\\odMineContracting.Api.csproj": {}
   },
   "projects": {
-    "C:\\Work\\odMineContracting\\be\\odMineContracting.Api\\odMineContracting.Api.csproj": {
+    "C:\\Work\\odMineContracting\\odMineContracting.Api\\odMineContracting.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\odMineContracting\\be\\odMineContracting.Api\\odMineContracting.Api.csproj",
+        "projectUniqueName": "C:\\Work\\odMineContracting\\odMineContracting.Api\\odMineContracting.Api.csproj",
         "projectName": "odMineContracting.Api",
-        "projectPath": "C:\\Work\\odMineContracting\\be\\odMineContracting.Api\\odMineContracting.Api.csproj",
+        "projectPath": "C:\\Work\\odMineContracting\\odMineContracting.Api\\odMineContracting.Api.csproj",
         "packagesPath": "C:\\Users\\max\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\odMineContracting\\be\\odMineContracting.Api\\obj\\",
+        "outputPath": "C:\\Work\\odMineContracting\\odMineContracting.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\max\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,44 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[9.5.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

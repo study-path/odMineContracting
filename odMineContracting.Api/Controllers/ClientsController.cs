@@ -1,44 +1,37 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Threading;
 using System.Threading.Tasks;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+using Microsoft.AspNetCore.Mvc;
+using odMineContracting.Api.Controllers.ViewModels;
 
 namespace odMineContracting.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/clients")]
     [ApiController]
     public class ClientsController : ControllerBase
     {
-        // GET: api/<ClientsController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IActionResult> GetAllAsync(CancellationToken cancellationToken)
         {
-            return new string[] { "value1", "value2" };
+            return this.Ok(new string[] { "value1", "value2" });
         }
 
-        // GET api/<ClientsController>/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/<ClientsController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<IActionResult> PostAsync([FromBody] ClientViewModel model, CancellationToken cancellationToken)
         {
+            return this.Ok();
         }
 
-        // PUT api/<ClientsController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<ClientsController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

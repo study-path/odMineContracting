@@ -6,6 +6,6 @@
 
         public string CityName { get; set; }
 
-        public string Province { get; set; }
+        public string ProvinceName { get; set; }
     }
 }
