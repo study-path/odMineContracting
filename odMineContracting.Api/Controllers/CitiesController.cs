@@ -24,7 +24,7 @@ namespace odMineContracting.Api.Controllers
         }
 
         /// <summary>
-        /// Get collection of cities
+        /// Get all cities
         /// </summary>
         [HttpGet]
         public async Task<IActionResult> GetAllAsync(CancellationToken cancellationToken)

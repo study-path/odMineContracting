@@ -6,8 +6,36 @@
     <members>
         <member name="M:odMineContracting.Api.Controllers.CitiesController.GetAllAsync(System.Threading.CancellationToken)">
             <summary>
-            Get collection of cities
+            Get all cities
             </summary>
+        </member>
+        <member name="M:odMineContracting.Api.Controllers.ClientsController.GetAllAsync(System.Threading.CancellationToken)">
+            <summary>
+            Get all clients
+            </summary>
+        </member>
+        <member name="M:odMineContracting.Api.Controllers.ClientsController.Get(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Get specific client
+            </summary>
+        </member>
+        <member name="M:odMineContracting.Api.Controllers.ClientsController.PostAsync(odMineContracting.Api.Controllers.ViewModels.ClientViewModel,System.Threading.CancellationToken)">
+            <summary>
+            Create new client
+            </summary>
+        </member>
+        <member name="M:odMineContracting.Api.Controllers.ClientsController.PutAsync(System.Int32,odMineContracting.Api.Controllers.ViewModels.ClientViewModel,System.Threading.CancellationToken)">
+            <summary>
+            Update client
+            </summary>
+        </member>
+        <member name="M:odMineContracting.Api.Controllers.ClientsController.DeleteAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Client, bye bye )
+            </summary>
+            <param name="clientId"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>
